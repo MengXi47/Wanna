@@ -1,0 +1,309 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DECRYPTOR           ICON                    "Decryptor.ico"
+
+IDI_SMALL               ICON                    "small.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_DECRYPTOR MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_DECRYPTOR ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Decryptor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "Decryptor, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (c) 2020",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_DECRYPTOR_DIALOG DIALOGEX 0, 0, 540, 360
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wana Decrypt0r 2.0"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Check &Payment",IDC_CHECKPAYMENT_BUTTON,160,336,180,19
+    PUSHBUTTON      "&Decrypt",IDC_DECRYPT_BUTTON,360,336,180,19
+    CTEXT           "Ooops, your files have been encrypted!",IDC_OOOPS_STATIC,160,3,302,19,0,WS_EX_TRANSPARENT
+    CTEXT           "Your files will be lost on",IDC_FILELOST_STATIC,16,196,126,11
+    CTEXT           "1/1/2017 00:00:00",IDC_DEADLINE_STATIC,11,215,124,11
+    CTEXT           "Time Left",IDC_DEADTIMELEFT_STATIC,34,235,80,11
+    CTEXT           "00:00:00:00",IDC_DEADCOUNTDOWN_STATIC,15,251,121,21
+    CTEXT           "Payment will be raised on",IDC_PAYMENTRAISE_STATIC,10,100,140,11
+    CTEXT           "1/1/2017 00:00:00",IDC_DATETIME_STATIC,11,118,124,11
+    CTEXT           "Time Left",IDC_RAISETIMELEFT_STATIC,34,140,80,11
+    CTEXT           "00:00:00:00",IDC_RAISECOUNTDOWN_STATIC,15,155,121,21
+    LTEXT           "Contact Us",IDC_COMTACTUS_STATIC,18,334,119,12,SS_NOTIFY
+    LTEXT           "How to buy bitcoins?",IDC_HOWTOBUY_STATIC,18,316,119,10,SS_NOTIFY
+    LTEXT           "About bitcoin",IDC_ABOUTBITCOIN_STATIC,18,298,119,10,SS_NOTIFY
+    LTEXT           "Send $300 worth of bitcoin to this address:",IDC_SENDBITCOIN_STATIC,257,286,277,15
+    CONTROL         "",IDC_RICHEDIT21,"RichEdit20W",WS_BORDER | WS_VSCROLL | WS_TABSTOP | 0x1844,160,26,380,251,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Copy",IDC_COPY_BUTTON,513,302,22,22
+    EDITTEXT        IDC_EDIT1,257,304,254,19,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         IDB_BITMAP1,IDC_LOGO_BUTTON,"Static",SS_BITMAP,35,5,87,82,WS_EX_DLGMODALFRAME
+    CONTROL         IDB_BITMAP2,IDC_BITCOIN_BUTTON,"Static",SS_BITMAP,160,288,93,34,WS_EX_CLIENTEDGE
+    COMBOBOX        IDC_COMBO1,466,7,73,149,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,6,88,149,93
+    GROUPBOX        "",IDC_STATIC,160,278,379,51
+    GROUPBOX        "",IDC_STATIC,6,184,149,93
+    CONTROL         "",IDC_PROGRESS1_STATIC,"Static",SS_BLACKFRAME,141,210,11,56
+    CONTROL         "",IDC_PROGRESS2_STATIC,"Static",SS_BLACKFRAME,141,114,11,56
+END
+
+IDD_DECRYPT_DIALOG DIALOGEX 0, 0, 360, 360
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Decrypt"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "C&opy to clipboard",IDC_CLIPBOARD_BUTTON,175,337,85,19
+    PUSHBUTTON      "&Close",IDC_CLOSE_BUTTON,270,337,85,19
+    COMBOBOX        IDD_DECRYPT_COMBOBOX,4,25,256,89,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Start",IDC_START_BUTTON,270,22,85,19
+    LTEXT           "Select a host to decrypt and click ""Start"".",IDC_SELECTHOST_STATIC,4,7,251,15
+    LISTBOX         IDC_FILELIST_LIST,4,46,351,282,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDC_CHECKPAYMENT_DIALOG DIALOGEX 0, 0, 200, 81
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Cancel",IDC_CANCEL_BUTTON,143,60,50,14
+    CONTROL         "",IDC_CHECKPAYMENTPROGRESS,"msctls_progress32",WS_BORDER,7,41,186,12
+    LTEXT           "",IDC_CONNECTING_STATIC,7,23,186,13
+    LTEXT           "Checking your payment...",IDC_CHECKING_STATIC,7,7,186,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_DECRYPTOR_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_DECRYPT_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 356
+    END
+
+    IDC_CHECKPAYMENT_DIALOG, DIALOG
+    BEGIN
+        VERTGUIDE, 199
+        TOPMARGIN, 1
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO_BITMAP         BITMAP                  "Bitmap\\136_1033.bmp"
+
+IDB_BITCOIN_BITMAP      BITMAP                  "Bitmap\\135_1033.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RCDATA
+//
+
+IDB_BITMAP3             RCDATA                  "Bitmap\\desktop.bmp"
+
+IDB_BITMAP4             RCDATA                  "Bitmap\\finished.bmp"
+
+IDR_MSG_BULGARIAN       RCDATA                  "msg\\m_bulgarian.wnry.rc4"
+
+IDR_MSG_CHINESE_SIMPLIFIED RCDATA                  "msg\\m_chinese_simplified.wnry.rc4"
+
+IDR_MSG_CHINESE_TRADITIONAL RCDATA                  "msg\\m_chinese_traditional.wnry.rc4"
+
+IDR_MSG_CROATIAN        RCDATA                  "msg\\m_croatian.wnry.rc4"
+
+IDR_MSG_CZECH           RCDATA                  "msg\\m_czech.wnry.rc4"
+
+IDR_MSG_DANISH          RCDATA                  "msg\\m_danish.wnry.rc4"
+
+IDR_MSG_DUTCH           RCDATA                  "msg\\m_dutch.wnry.rc4"
+
+IDR_MSG_ENGLISH         RCDATA                  "msg\\m_english.wnry.rc4"
+
+IDR_MSG_FILIPINO        RCDATA                  "msg\\m_filipino.wnry.rc4"
+
+IDR_MSG_FINNISH         RCDATA                  "msg\\m_finnish.wnry.rc4"
+
+IDR_MSG_FRENCH          RCDATA                  "msg\\m_french.wnry.rc4"
+
+IDR_MSG_GERMAN          RCDATA                  "msg\\m_german.wnry.rc4"
+
+IDR_MSG_GREEK           RCDATA                  "msg\\m_greek.wnry.rc4"
+
+IDR_MSG_INDONESIAN      RCDATA                  "msg\\m_indonesian.wnry.rc4"
+
+IDR_MSG_ITALIAN         RCDATA                  "msg\\m_italian.wnry.rc4"
+
+IDR_MSG_JAPANESE        RCDATA                  "msg\\m_japanese.wnry.rc4"
+
+IDR_MSG_KOREAN          RCDATA                  "msg\\m_korean.wnry.rc4"
+
+IDR_MSG_LATVIAN         RCDATA                  "msg\\m_latvian.wnry.rc4"
+
+IDR_MSG_NORWEGIAN       RCDATA                  "msg\\m_norwegian.wnry.rc4"
+
+IDR_MSG_POLISH          RCDATA                  "msg\\m_polish.wnry.rc4"
+
+IDR_MSG_PORTUGUESE      RCDATA                  "msg\\m_portuguese.wnry.rc4"
+
+IDR_MSG_ROMANIAN        RCDATA                  "msg\\m_romanian.wnry.rc4"
+
+IDR_MSG_RUSSIAN         RCDATA                  "msg\\m_russian.wnry.rc4"
+
+IDR_MSG_SLOVAK          RCDATA                  "msg\\m_slovak.wnry.rc4"
+
+IDR_MSG_SPANISH         RCDATA                  "msg\\m_spanish.wnry.rc4"
+
+IDR_MSG_SWEDISH         RCDATA                  "msg\\m_swedish.wnry.rc4"
+
+IDR_MSG_TURKISH         RCDATA                  "msg\\m_turkish.wnry.rc4"
+
+IDR_MSG_VIETNAMESE      RCDATA                  "msg\\m_vietnamese.wnry.rc4"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "Decryptor"
+    IDS_CHECKPAYMENTOK      "Congratulations! Your payment has been checked!\nStart decrypting now!"
+    IDS_CHECKPAYMENTFAIL    "Failed to check your payment!\nPlease make sure that your computer is connected to the Internet and our Internet Service Provider (ISP) does not block connections to the Network!"
+    IDC_DECRYPTOR           "DECRYPTOR"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
